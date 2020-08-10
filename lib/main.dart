@@ -5,6 +5,7 @@ import 'package:calculator_app/CameraScreen.dart';
 import 'package:calculator_app/InputInformationScreen.dart';
 import 'package:calculator_app/SecondScreen.dart';
 import 'package:calculator_app/UserInformation.dart';
+import 'package:calculator_app/PageViewDemonstration.dart';
 
 void main() {
   runApp(MainScreen());
@@ -70,8 +71,15 @@ class FirstScreen extends StatelessWidget{
               onPressed:(){
                 navigateToCameraScreen(context);
               },
-            )
-
+            ),
+            RaisedButton(
+              color: Colors.blue,
+              textColor: Colors.white,
+              child: Text('Click to See Pageview Demonstration'),
+              onPressed:(){
+                navigateToPageViewDemonstrationScreen(context);
+              },
+            ),
           ],
         ),
       ),
@@ -98,6 +106,12 @@ class FirstScreen extends StatelessWidget{
   void navigateToCameraScreen(context) async{
     Navigator.push(context, MaterialPageRoute(builder: (context) => CameraScreen(),));
   }
+
+  void navigateToPageViewDemonstrationScreen(context) async{
+    Navigator.push(context, MaterialPageRoute(builder: (context) => PageViewDemonstration(),));
+  }
+
+
 
 }
 
