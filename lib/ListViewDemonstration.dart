@@ -20,6 +20,8 @@ Widget prepareListViewData(context){
               ListTile(
                 trailing: Icon(Icons.arrow_forward) ,
                 title: Text('Sunday'),
+                subtitle: Text('Priority High'), //Priority
+                onTap: () => GestureTapCallback, // Tap action
               ),
               ListTile(
                 trailing: Icon(Icons.arrow_forward) ,

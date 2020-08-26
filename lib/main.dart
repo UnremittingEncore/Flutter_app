@@ -6,7 +6,7 @@ import 'package:calculator_app/InputInformationScreen.dart';
 import 'package:calculator_app/SecondScreen.dart';
 import 'package:calculator_app/UserInformation.dart';
 import 'package:calculator_app/PageViewDemonstration.dart';
-
+//import 'package:calculator_app/RestApiDemonstration.dart';
 void main() {
   runApp(MainScreen());
 }
@@ -80,6 +80,14 @@ class FirstScreen extends StatelessWidget{
                 navigateToPageViewDemonstrationScreen(context);
               },
             ),
+            RaisedButton(
+              color: Colors.blue,
+              textColor: Colors.white,
+              child: Text('Click to See Rest API Demonstration'),
+              onPressed:(){
+               // navigateToRestApiDemonstrationScreen(context);
+              },
+            ),
           ],
         ),
       ),
@@ -110,8 +118,11 @@ class FirstScreen extends StatelessWidget{
   void navigateToPageViewDemonstrationScreen(context) async{
     Navigator.push(context, MaterialPageRoute(builder: (context) => PageViewDemonstration(),));
   }
-
-
+/*
+  void navigateToRestApiDemonstrationScreen(context) async{
+    Navigator.push(context, MaterialPageRoute(builder: (context) => RestApiDemonstration(),));
+  }
+*/
 
 }
 
